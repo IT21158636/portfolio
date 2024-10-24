@@ -65,30 +65,6 @@ const typed = new Typed(".multiple-text", {
   loop: true,
 });
 
-function toggleDarkMode() {
-  const icon = document.getElementById("toggleDark");
-  icon.classList.toggle("bx-sun");
-  icon.classList.toggle("bx-moon");
-
-  const root = document.documentElement;
-  if (icon.classList.contains("bx-moon")) {
-    // Apply light mode styles (default mode)
-    root.style.setProperty("--bg-color", "#d2d1e9");
-    root.style.setProperty("--second-bg-color", "#e2e1ec");
-    root.style.setProperty("--text-color", "#2f3133");
-    root.style.setProperty("--main-color", "#6246e9");
-  } else {
-    // Apply dark mode styles
-    root.style.setProperty("--bg-color", "#2C3333");
-    root.style.setProperty("--second-bg-color", "#2E4F4F");
-    root.style.setProperty("--text-color", "#CBE4DE");
-    root.style.setProperty("--main-color", "#11aaaf");
-  }
-}
-
-const toggleIcon = document.getElementById("toggleDark");
-toggleIcon.addEventListener("click", toggleDarkMode);
-
 // ----------------------------------------------------------------------------------
 
 function toggleDarkModeM() {
@@ -114,3 +90,27 @@ function toggleDarkModeM() {
 
 const toggleIconM = document.getElementById("toggleDarkM");
 toggleIconM.addEventListener("click", toggleDarkModeM);
+
+function toggleDarkMode() {
+  const icon = document.getElementById("toggleDark");
+  icon.classList.toggle("bx-sun");
+  icon.classList.toggle("bx-moon");
+
+  const root = document.documentElement;
+  if (icon.classList.contains("bx-moon")) {
+    // Apply light mode styles (default mode)
+    root.style.setProperty("--bg-color", "#d2d1e9");
+    root.style.setProperty("--second-bg-color", "#e2e1ec");
+    root.style.setProperty("--text-color", "#2f3133");
+    root.style.setProperty("--main-color", "#6246e9");
+  } else {
+    // Apply dark mode styles
+    root.style.setProperty("--bg-color", "#2C3333");
+    root.style.setProperty("--second-bg-color", "#2E4F4F");
+    root.style.setProperty("--text-color", "#CBE4DE");
+    root.style.setProperty("--main-color", "#11aaaf");
+  }
+}
+
+const toggleIcon = document.getElementById("toggleDark");
+toggleIcon.addEventListener("click", toggleDarkMode);
